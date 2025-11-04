@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>React Page</title>
+     <!-- ✅ React and ReactDOM (Development versions) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- ✅ Babel Compiler -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function Login()
+        {
+            retun(
+                <div>
+                    <h2>User Login</h2>
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text" /></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password" /></dd>
+                    </dl>
+                </div>
+            )
+        }
+        function SearchBar(){
+            return(
+                <div>
+                   <input type="text" placeholder = "Search Amazon.in">
+                   <button>Searh</button>
+                </div>
+            )
+        }
+        function NavBar(){
+            return(
+                <nav>
+                    <span>Amazon</span>
+                    <SearchBar />
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                </nav>
+            )
+        }
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <div>
+                <NavBar />
+                <Login />
+            </div>
+        )
+    </script>
+
+</head>
+<body>
+    <noscript>Please enable JavaScript on your browser.</noscript>
+    <div id="root"></div>
+</body>
+</html>
